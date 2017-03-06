@@ -1,0 +1,49 @@
+@relation GenesfromEnsembl.Homeobox
+
+@attribute ID string
+@attribute species string
+@attribute source string
+@attribute type string
+@attribute logic_name string
+@attribute description string
+@attribute display_name string
+@attribute assembly_name string
+@attribute seq_region_name numeric
+@attribute start numeric
+@attribute end numeric
+@attribute strand numeric
+@attribute version numeric
+@attribute db_type string
+@attribute transcript numeric
+
+@data
+ENSG00000227059,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,anomaloushomeobox[Source:HGNCSymbol;Acc:HGNC:40024],ANHX,GRCh38,12,133218312,133236095,-1,6,core,2
+ENSG00000178928,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,tetrapeptiderepeathomeobox1[Source:HGNCSymbol;Acc:HGNC:32174],TPRX1,GRCh38,19,47801243,47819051,-1,8,core,3
+ENSG00000119608,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,prosperohomeobox2[Source:HGNCSymbol;Acc:HGNC:26715],PROX2,GRCh38,14,74852871,74871940,-1,12,core,3
+ENSG00000123407,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,homeoboxC12[Source:HGNCSymbol;Acc:HGNC:5124],HOXC12,GRCh38,12,53954834,53958956,1,3,core,1
+ENSG00000174279,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,even-skippedhomeobox2[Source:HGNCSymbol;Acc:HGNC:3507],EVX2,GRCh38,2,176077472,176083913,-1,4,core,1
+ENSG00000234493,homo_sapiens,havana,Gene,havana,Rhoxhomeoboxfamilymember1pseudogene1[Source:HGNCSymbol;Acc:HGNC:51580],RHOXF1P1,GRCh38,0,120010718,120015544,-1,2,core,2
+ENSG00000274529,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,SEBOXhomeobox[Source:HGNCSymbol;Acc:HGNC:32942],SEBOX,GRCh38,17,28364268,28365244,-1,5,core,2
+ENSG00000235602,homo_sapiens,havana,Gene,havana,POUclass5homeobox1pseudogene3[Source:HGNCSymbol;Acc:HGNC:9222],POU5F1P3,GRCh38,12,8133772,8134849,-1,5,core,1
+ENSG00000237872,homo_sapiens,havana,Gene,havana,POUclass5homeobox1pseudogene4[Source:HGNCSymbol;Acc:HGNC:33310],POU5F1P4,GRCh38,1,155433178,155434262,1,4,core,1
+ENSG00000259849,homo_sapiens,havana,Gene,havana,VENThomeoboxpseudogene1[Source:HGNCSymbol;Acc:HGNC:30900],VENTXP1,GRCh38,0,26558337,26561052,1,1,core,1
+ENSG00000101883,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,Rhoxhomeoboxfamilymember1[Source:HGNCSymbol;Acc:HGNC:29993],RHOXF1,GRCh38,0,120109053,120115937,-1,4,core,1
+ENSG00000128713,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,homeoboxD11[Source:HGNCSymbol;Acc:HGNC:5134],HOXD11,GRCh38,2,176104216,176109754,1,12,core,3
+ENSG00000282757,homo_sapiens,havana,Gene,havana,doublehomeoboxB[Source:HGNCSymbol;Acc:HGNC:33345],DUXB,GRCh38,16,75694434,75700152,-1,2,core,2
+ENSG00000231411,homo_sapiens,havana,Gene,havana,doublehomeobox4like31(pseudogene)[Source:HGNCSymbol;Acc:HGNC:51770],DUX4L31,GRCh38,0,10171590,10172725,-1,1,core,1
+ENSG00000270222,homo_sapiens,havana,Gene,havana,doublehomeoboxApseudogene11[Source:HGNCSymbol;Acc:HGNC:51812],DUXAP11,GRCh38,16,59655602,59656336,1,1,core,1
+ENSG00000250482,homo_sapiens,havana,Gene,havana,doublehomeobox4like51(pseudogene)[Source:HGNCSymbol;Acc:HGNC:51810],DUX4L51,GRCh38,5,31249879,31250987,1,3,core,1
+ENSG00000258336,homo_sapiens,havana,Gene,havana,POUclass5homeobox1pseudogene3[Source:HGNCSymbol;Acc:HGNC:9222],DUX4L52,GRCh38,12,61600067,61600843,-1,2,core,1
+ENSG00000206195,homo_sapiens,havana,Gene,havana,doublehomeoboxApseudogene8[Source:EntrezGene;Acc:503637],DUXAP8,GRCh38,22,15784959,15829984,1,10,core,6
+ENSG00000150051,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,mohawkhomeobox[Source:HGNCSymbol;Acc:HGNC:23729],MKX,GRCh38,10,27672875,27746060,-1,13,core,2
+ENSG00000148516,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,zincfingerE-boxbindinghomeobox1[Source:HGNCSymbol;Acc:HGNC:11642],ZEB1,GRCh38,10,31318495,31529814,1,21,core,25
+ENSG00000063515,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,goosecoidhomeobox2[Source:HGNCSymbol;Acc:HGNC:4613],GSC2,GRCh38,22,19148576,19150283,-1,2,core,1
+ENSG00000131721,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,Rhoxhomeoboxfamilymember2[Source:HGNCSymbol;Acc:HGNC:30011],RHOXF2,GRCh38,0,120158561,120165630,1,5,core,1
+ENSG00000151650,homo_sapiens,ensembl_havana,Gene,ensembl_havana_gene,VENThomeobox[Source:HGNCSymbol;Acc:HGNC:13639],VENTX,GRCh38,10,133237404,133241929,1,7,core,1
+ENSG00000227351,homo_sapiens,havana,Gene,havana,Nanoghomeoboxpseudogene6[Source:HGNCSymbol;Acc:HGNC:23104],NANOGP6,GRCh38,10,99788564,99789410,-1,2,core,1
+ENSG00000282308,homo_sapiens,havana,Gene,havana,divergent-pairedrelatedhomeoboxpseudogene3[Source:HGNCSymbol;Acc:HGNC:32169],DPRXP3,GRCh38,14,35222174,35222746,1,1,core,1
+ENSG00000228670,homo_sapiens,havana,Gene,havana,Nanoghomeoboxpseudogene2[Source:HGNCSymbol;Acc:HGNC:23100],NANOGP2,GRCh38,2,222452400,222453126,-1,4,core,1
+ENSG00000231697,homo_sapiens,havana,Gene,havana,Nanoghomeoboxpseudogene5[Source:HGNCSymbol;Acc:HGNC:23103],NANOGP5,GRCh38,9,100175178,100176054,1,3,core,2
+ENSG00000231750,homo_sapiens,havana,Gene,havana,Nanoghomeoboxpseudogene10[Source:HGNCSymbol;Acc:HGNC:23108],NANOGP10,GRCh38,0,43407665,43408559,-1,3,core,1
+ENSG00000231809,homo_sapiens,havana,Gene,havana,Nanoghomeoboxpseudogene9[Source:HGNCSymbol;Acc:HGNC:23107],NANOGP9,GRCh38,0,65772741,65773632,-1,4,core,1
+ENSG00000270552,homo_sapiens,havana,Gene,havana,doublehomeoboxApseudogene3[Source:HGNCSymbol;Acc:HGNC:32182],DUXAP3,GRCh38,10,42747544,42748687,-1,1,core,1

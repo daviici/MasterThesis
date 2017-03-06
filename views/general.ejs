@@ -1,0 +1,92 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+ <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+ <link rel="stylesheet" href="/styles/general.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+</head>
+<body>
+<%- include /partials/header.ejs %>
+
+<div id="load_screen">
+<div id="loading"><img src="/images/ajax-loader.gif" alt="" height="40" width="40"> <strong>Loading Page</strong> </div>
+</div>
+
+<table id="organisms" class="table table-striped" width="100%">
+        <thead>
+            <tr>
+                <th>Taxonomy</th>
+                <th>Tipology</th>
+                <th>Species</th>
+                <th>Taxon</th>
+                <th>Domains</th>
+                <th>Subphylum</th>
+                <th>Class</th>
+                <th>Pathway</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% for(var i=0; i < data.length-1; i++) { %>
+        <% var j = JSON.parse(JSON.stringify(data[i].split("\t")))[3]; %>
+           <tr>
+             <td>
+               <%= JSON.parse(JSON.stringify(data[i].split("\t")))[0] %>
+             </td>
+             <td>
+                <a href="#" class="typology">
+               <%= JSON.parse(JSON.stringify(data[i].split("\t")))[1] %>
+                </a>
+             </td>
+             <td>
+               <%= JSON.parse(JSON.stringify(data[i].split("\t")))[2] %>
+             </td>
+             <td>
+                <%= j.split(";")[0] %>
+             </td>
+             <td>
+               <%= j.split(";")[1] %>
+             </td>
+             <td>
+               <%= j.split(";")[2] %>
+             </td>
+             <td>
+               <%= j.split(";")[3] %>
+             </td>
+              <td>
+               <a href="#" class="pathway">
+               See Pathway
+               </a>
+             </td>
+           </tr>
+        <% } %>
+        </tbody>
+    </table>
+</div>
+<script>
+window.addEventListener("load", function(){
+  var load_screen = document.getElementById("load_screen");
+  document.body.removeChild(load_screen);
+});
+
+$(document).ready(function() {
+      $('#organisms').DataTable();
+  } );
+
+var x = document.getElementsByClassName("typology");
+var y = document.getElementsByClassName("pathway");
+
+var i;
+for (i = 0; i < x.length; i++) {
+    x[i].href = '/specific/:' + x[i].innerText;
+    y[i].href = '/pathway/:' + x[i].innerText;
+}
+</script>
+</body>
+</html>

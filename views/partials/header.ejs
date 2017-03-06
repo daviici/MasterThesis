@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/styles/bootstrap.css">
+<script src="/scripts/bootstrap.js"></script>
+<script src="/scripts/header.js"></script>
+
+<title>Gene Search Tool</title>
+<nav class="navbar navbar-inverse " role="navigation">
+    <div class="container-fluid">
+        <!-- add header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Home</a>
+        </div>
+        <!-- add menu -->
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="nav navbar-nav">
+               <!-- <li><a href="/general">Organisms Kegg</a></li>-->
+                <li><a href="/genes">Search Genes</a></li>
+                <li><a href="/proteins">Search Proteins</a></li>
+                <li><a href="/wekaPage">Weka Tools</a></li>
+                <li><a href="/solrPage">Solr Tools</a></li>
+               <!-- <li><a href="/genomes">Genomes Kegg</a></li>-->
+               <!-- <li><a href="/pathwaykegg">Pathway Kegg</a></li>-->
+                <li><a href="/profile">My Profile</a></li>
+            </ul>
+            <form action="/search" method="post" class="navbar-form navbar-right">
+                <%if (typeof user != 'undefined') { %>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="keyword" placeholder="Search for genes">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+                 <% } else { %>
+                <% } %>
+            </form>
+        </div>
+    </div>
+</nav>

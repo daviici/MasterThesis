@@ -1,0 +1,33 @@
+{
+  "name": "PP_Genes",
+  "main": "server.js",
+  "dependencies": {
+    "async": "^2.1.4",
+    "asyncawait": "^1.0.6",
+    "bcrypt-nodejs": "latest",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-session": "*",
+    "method-override": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "passport": "*",
+    "passport-facebook": "*",
+    "passport-google-oauth": "*",
+    "passport-local": "*",
+    "passport-twitter": "*",
+    "node-arff"        : "*",
+    "underscore"       : "*",
+    "underscore.string": "*",
+    "plugins": [
+      "transform-runtime"
+    ],
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  }
+}

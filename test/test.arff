@@ -1,0 +1,28 @@
+@relation GenesfromEnsembl
+
+@attribute ID string
+@attribute species string
+@attribute source string
+@attribute type string
+@attribute logic_name string
+@attribute description string
+@attribute display_name string
+@attribute assembly_name string
+@attribute seq_region_name string
+@attribute start numeric
+@attribute end numeric
+@attribute strand numeric
+@attribute version numeric
+@attribute db_type string
+@attribute transcript numeric
+
+@data
+ENSG00000165091,homo_sapiens,ensembl_havana,undefined,ensembl_havana_gene,transmembranechannellike1[Source:HGNCSymbol;Acc:HGNC:16513],TMC1,GRCh38,9,72521801,72836351,1,15,core,6
+ENSG00000164291,homo_sapiens,ensembl_havana,undefined,ensembl_havana_gene,arylsulfatasefamilymemberK[Source:HGNCSymbol;Acc:HGNC:25239],ARSK,GRCh38,5,95555074,95605064,1,16,core,5
+ENSG00000158077,homo_sapiens,ensembl_havana,undefined,ensembl_havana_gene,NLRfamilypyrindomaincontaining14[Source:HGNCSymbol;Acc:HGNC:22939],NLRP14,GRCh38,11,7020446,7071308,1,4,core,1
+ENSG00000180974,homo_sapiens,ensembl_havana,undefined,ensembl_havana_gene,olfactoryreceptorfamily52subfamilyEmember4[Source:HGNCSymbol;Acc:HGNC:15213],OR52E4,GRCh38,11,5884271,5885300,1,3,core,1
+ENSG00000205029,homo_sapiens,ensembl_havana,undefined,ensembl_havana_gene,olfactoryreceptorfamily5subfamilyDmember16[Source:HGNCSymbol;Acc:HGNC:15283],OR5D16,GRCh38,11,55838752,55839738,1,1,core,1
+ENSG00000139618,homo_sapiens,ensembl_havana,undefined,ensembl_havana_gene,BRCA2DNArepairassociated[Source:HGNCSymbol;Acc:HGNC:1101],BRCA2,GRCh38,13,32315474,32400266,1,14,core,7
+ENSG00000171488,homo_sapiens,ensembl_havana,undefined,ensembl_havana_gene,leucinerichrepeatcontaining8familymemberC[Source:HGNCSymbol;Acc:HGNC:25075],LRRC8C,GRCh38,1,89633072,89769903,1,14,core,4
+ENSG00000178397,homo_sapiens,ensembl_havana,undefined,ensembl_havana_gene,familywithsequencesimilarity220memberA[Source:HGNCSymbol;Acc:HGNC:22422],FAM220A,GRCh38,7,6329409,6348981,-1,12,core,6
+ENSG00000147041,homo_sapiens,ensembl_havana,undefined,ensembl_havana_gene,synaptotagminlike5[Source:HGNCSymbol;Acc:HGNC:15589],SYTL5,GRCh38,X,38006582,38128819,1,11,core,2

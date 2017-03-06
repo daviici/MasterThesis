@@ -1,0 +1,462 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.js"></script>
+    <link rel="stylesheet" href="/styles/general.css">
+    <script src="/scripts/writetofile.js"></script>    
+    <script src="/scripts/FileSaver.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+</head>
+<body>
+<%- include /partials/header.ejs %>
+
+<div id="load_screen">
+<div id="loading"><img src="/images/ajax-loader.gif" alt="" height="40" width="40"> <strong>Loading Page</strong> </div>
+</div>
+
+<table id="organisms" class="table table-striped" width="100%">
+        <% if (typeof type == 'undefined') { %> 
+        <thead>
+            <tr>
+                <th>Pathway</th>
+                <th>Information</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% for(var i=0; i < data.length-1; i++) { %>
+           <tr>
+             <td>
+                <a href="#" class="idgene">
+               <%= JSON.parse(JSON.stringify(data[i].split("\t")))[0] %>
+                </a>
+             </td>
+             <td>
+               <%= JSON.parse(JSON.stringify(data[i].split("\t")))[1] %>
+             </td>
+           </tr>
+        <% } %>
+        </tbody>
+        <% } else if (type == 'asearch'){%>
+        <thead>
+            <tr>
+                <th class="text-center">Results of Advanced Search</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% for(var j=0; j < data2.split(";").length-1; j++) { %>
+           <tr>
+             <td class="text-center">
+                <a href="#" class="idgene">
+               <%= gene.split(";")[j] %>
+               </a>
+             </td>
+           </tr>
+        <% } %>
+        </tbody>
+        <% } else if (type == 'pdb'){%>
+        <thead>
+            <tr>
+                <th>Protein PDB ID</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% for(var i=0; i < data.length; i++) { %>
+           <tr>
+             <td>
+                <a href="#" class="idgene">
+               <%= "PDB:" + JSON.parse(JSON.stringify(data[i].split('PDB structureId="')))[1].split('"')[0] %>
+                </a>
+             </td>
+             <td>
+               <%= JSON.parse(JSON.stringify(data[i].split('title="')))[1].split('"')[0] %>
+             </td>
+           </tr>
+        <% } %>
+        </tbody>
+        <% } else if (type == 'pdbIndividual'){%>
+         <tbody>
+          <div class="container" style="padding-top:80px; word-wrap:break-word;">
+            <h3 class="text-left"><span class="fa fa-info"></span> Protein PDB Information </h3>
+             <div class="container">
+                 <p>
+                     <strong>Structure ID </strong> <%= JSON.parse(JSON.stringify(data[0].split('structureId="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>Title : </strong> <%= JSON.parse(JSON.stringify(data[0].split('title="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>EXP Method : </strong> <%= JSON.parse(JSON.stringify(data[0].split('expMethod="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>Keywords : </strong> <%= JSON.parse(JSON.stringify(data[0].split('keywords="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>Number Entities : </strong> <%= JSON.parse(JSON.stringify(data[0].split('nr_entities="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>Number Residues : </strong> <%= JSON.parse(JSON.stringify(data[0].split('nr_residues="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>Number Atoms : </strong> <%= JSON.parse(JSON.stringify(data[0].split('nr_atoms="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>Deposition Date : </strong> <%= JSON.parse(JSON.stringify(data[0].split('deposition_date="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>Release Date : </strong> <%= JSON.parse(JSON.stringify(data[0].split('release_date="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>Last Modification Date : </strong> <%= JSON.parse(JSON.stringify(data[0].split('last_modification_date="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>Structure Authors : </strong> <%= JSON.parse(JSON.stringify(data[0].split('structure_authors="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>Citation Authors : </strong> <%= JSON.parse(JSON.stringify(data[0].split('citation_authors="')))[1].split('"')[0] %>
+
+                 </p>
+                 <p>
+                     <strong>Status : </strong> <%= JSON.parse(JSON.stringify(data[0].split('status="')))[1].split('"')[0] %>
+
+                 </p>
+
+                 
+
+              </div>
+            </div>
+          </tbody>
+        <% } else if (type == 'kegg'){%>
+        <thead>
+            <tr>
+                <th>Gene KEGG ID</th>
+                <th>Information</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% for(var i=0; i < data.length; i++) { %>
+           <tr>
+             <td>
+                <a href="#" class="idgene">
+               <%= JSON.parse(JSON.stringify(data[i].split("\t")))[0] %>
+                </a>
+             </td>
+             <td>
+               <%= JSON.parse(JSON.stringify(data[i].split("\t")))[1] %>
+             </td>
+           </tr>
+        <% } %>
+        </tbody>
+        <% } else if (type == 'ensembl'){%>
+         <thead>
+            <tr>
+                <th>Gene Ensembl ID</th>
+                <th>Name</th>
+                <th>Information</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% for(var i=0; i < data.length; i++) { %>
+           <tr>
+             <td class="text-left">
+                <a href="#" class="idgene">
+               <%= data[i].id %>
+               </a>
+             </td>
+             <td>
+               <%= data[i].display_name %>
+             </td>
+             <td>
+               <%= data[i].description %>
+             </td>
+           </tr>
+        <% } %>
+        </tbody>
+        <% } else if (type == 'solr'){%>
+         <thead>
+            <tr>
+                <th>Gene Ensembl ID</th>
+                <th>Name</th>
+                <th>Information</th>
+                <th>Seq Region Name</th>
+                <th>Version</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Strand</th>
+                <th>Transcript</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% for(var i=0; i < data.length; i++) { %>
+           <tr>
+             <td class="text-left">
+                <a href="#" class="idgene">
+               <%= data[i].id %>
+               </a>
+             </td>
+             <td>
+               <%= data[i].display_name %>
+             </td>
+             <td>
+               <%= data[i].description %>
+             </td>
+              <td>
+               <%= data[i].seq_region_name %>
+             </td>
+             <td>
+               <%= data[i].version %>
+             </td>
+             <td>
+               <%= data[i].start %>
+             </td>
+             <td>
+               <%= data[i].end %>
+             </td>
+             <td>
+               <%= data[i].strand %>
+             </td>
+             <td>
+               <%= data[i].transcript %>
+             </td>
+           </tr>
+        <% } %>
+        </tbody>
+        <% } else if (type == 'covertToKegg'){%>
+          <thead>
+            <tr>
+                <th>Gene Ensembl ID</th>
+                <th>Gene Kegg ID</th>
+                <th>Gene NCBI ID</th>  
+                <th>Name</th>
+                <th>Information</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% var j=0 %>
+        <% for(var i=0; i < data.length; i=i+2) { %>
+           <tr>
+             <td class="text-left">
+                <a href="#" class="idgene">
+               <%= data[i]%>
+               </a>
+             </td>
+             <td class="text-left">
+                <a href="#" class="idgene">
+               <%= data[i+1] %>
+               </a>
+             </td>
+             <td class="text-left">
+                <a href="#" class="idgene">
+               <%= data[i+1].split(":")[1] %>
+               </a>
+             </td>
+             <td class="text-left">
+               <%= info[j].display_name %>
+             </td>
+             <td class="text-left">
+               <%= info[j].description %>
+               <% j++ %>
+             </td>
+           </tr>
+        <% } %>
+        </tbody>
+        <% } else if (type == 'convertToEnsembl'){%>
+         <thead>
+            <tr>
+                <th>Gene Kegg ID</th>
+                <th>Gene Ensembl ID</th>
+                <th>Information</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% var j=0 %>
+        <% for(var i=0; i < data.length; i=i+2) { %>
+           <tr>
+             <td class="text-left">
+                <a href="#" class="idgene">
+               <%= data[i]%>
+               </a>
+             </td>
+             <td class="text-left">
+                <a href="#" class="idgene">
+               <%= data[i+1] %>
+               </a>
+             </td>
+             <td>
+               <%= JSON.parse(JSON.stringify(info[j].split("\t")))[1] %>
+               <% j++ %>
+             </td>
+           </tr>
+        <% } %>
+        </tbody>
+        <% } else if (type == 'ensemblindividual'){%>
+        <tbody>
+          <div class="container" style="padding-top:80px; word-wrap:break-word;">
+            <h3 class="text-left"><span class="fa fa-info"></span> Ensembl Gene Information </h3>
+             <div class="container">
+                 <p>
+                     <strong>ID </strong>: <%= data.id %>
+                 </p>
+                 <p>
+                     <strong>Species </strong>: <%= data.species %>
+                 </p>
+                 <p>
+                     <strong>Source </strong>: <%= data.source %>
+                 </p>
+                 <p>
+                     <strong>Type </strong>: <%= data.object_type %>
+                 </p>
+                 <p>
+                     <strong>Logic Name </strong>: <%= data.logic_name %>
+                 </p>
+                 <p>
+                      <strong>Description </strong>: <%= data.description %>
+                 </p>
+                 <p>
+                     <strong>Display Name </strong>: <%= data.display_name %>
+                 </p>
+                 <p>
+                     <strong>Assembly Name </strong>: <%= data.assembly_name %>
+                 </p>
+                 <p>
+                     <strong>Seq Region Name </strong>: <%= data.seq_region_name %>
+                 </p>
+                 <p>
+                     <strong>Start </strong>: <%= data.start %>
+                 </p>
+                 <p>
+                     <strong>End </strong>: <%= data.end %>
+                 </p>
+                 <p>
+                     <strong>Strand </strong>: <%= data.strand %>
+                 </p>
+                 <p>
+                     <strong>Version </strong>: <%= data.version %>
+                 </p>
+                 <p>
+                     <strong>DB Type </strong>: <%= data.db_type %>
+                 </p>
+                 <p>
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Transcripts</button>
+                    <div id="demo2" class="collapse">
+                     <% for(var i=0; i < data.Transcript.length; i++) { %>
+                        <ul class="list-group">
+                         <li class="list-group-item list-group-item-info"><strong>Transcript <%=i+1%> </strong>
+                          <p><strong>ID </strong>: <%= data.Transcript[i].id %></p>
+                          <p><strong>Source </strong>: <%= data.Transcript[i].source %></p>
+                          <p><strong>Object Type </strong>: <%= data.Transcript[i].object_type %></p>
+                          <p><strong>Logic Name </strong>: <%= data.Transcript[i].logic_name %></p>
+                          <p><strong>Seq Region Name </strong>: <%= data.Transcript[i].seq_region_name %></p>
+                          <p><strong>Species </strong>: <%= data.Transcript[i].species %></p>
+                          <p><strong>Assembly Name </strong>: <%= data.Transcript[i].assembly_name %></p>
+                          <p><strong>Display Name </strong>: <%= data.Transcript[i].display_name %></p>
+                          <p><strong>Biotype </strong>: <%= data.Transcript[i].biotype %></p>
+                          <p><strong>Start </strong>: <%= data.Transcript[i].start %></p>
+                          <p><strong>End </strong>: <%= data.Transcript[i].end %></p>
+                          <p><strong>Version </strong>: <%= data.Transcript[i].version %></p>
+                          <%if (data.Transcript[i].Translation != null) { %>
+                              <ul class="list-group">
+                                <li class="list-group-item list-group-item-danger"><strong>Translation:</strong>
+                                    <p><strong>ID</strong>: <%= data.Transcript[i].Translation.id %></p>
+                                    <p><strong>Object Type</strong>: <%= data.Transcript[i].Translation.object_type %></p>
+                                    <p><strong>Species</strong>: <%= data.Transcript[i].Translation.species %></p>
+                                    <p><strong>Parent</strong>: <%= data.Transcript[i].Translation.Parent %></p>
+                                    <p><strong>Length</strong>: <%= data.Transcript[i].Translation.length %></p>
+                                    <p><strong>Start</strong>: <%= data.Transcript[i].Translation.start %></p>
+                                    <p><strong>End</strong>: <%= data.Transcript[i].Translation.end %></p>
+                                </li>
+                            </ul>
+                          <% } %>
+                          <% for(var j=0; j < data.Transcript[i].Exon.length; j++) { %>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-warning"><strong>Exon <%=j+1%> </strong>
+                                    <p><strong>ID</strong>: <%= data.Transcript[i].Exon[j].id %></p>
+                                    <p><strong>Object Type</strong>: <%= data.Transcript[i].Exon[j].object_type %></p>
+                                    <p><strong>Species</strong>: <%= data.Transcript[i].Exon[j].species %></p>
+                                    <p><strong>Assembly Name</strong>: <%= data.Transcript[i].Exon[j].assembly_name %></p>
+                                    <p><strong>Seq Region Name</strong>: <%= data.Transcript[i].Exon[j].seq_region_name %></p>
+                                    <p><strong>Start</strong>: <%= data.Transcript[i].Exon[j].start %></p>
+                                    <p><strong>End</strong>: <%= data.Transcript[i].Exon[j].end %></p>
+                                </li>
+                            </ul>
+                          <% } %>
+                         </li>
+                        </ul>
+                     <% } %>
+                    </div>
+                 </p>
+                 <p>
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Sequence</button>
+                    <div id="demo" class="collapse">
+                         <%= data2.seq %>
+                    </div>
+                 </p>
+             </div>
+         </div>
+        </tbody>
+        <div class="col-sm-12" style="text-align:center">
+     <button type="button" class="btn btn-success buttonCss" onclick="WriteToFile( '<%= data.id %>','<%= data.species %>','<%= data.source %>'
+     ,'<%= data.type %>','<%= data.logic_name %>','<%= data.description %>','<%= data.display_name %>','<%= data.assembly_name %>','<%= data.seq_region_name %>','<%= data.start %>'
+     ,'<%= data.end %>','<%= data.strand %>','<%= data.version %>','<%= data.db_type %>','<%= data.Transcript.length %>')"> Download KEGG</button>
+        <% } else{%>
+        <thead>
+            <tr>
+                <th class="text-center">Genes For Pathway <%= JSON.parse(JSON.stringify(data[0].split("\t")))[0] %> <br>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        <% var all = [] %>
+        <% for(var i=0; i < data.length-1; i++) { %>
+           <tr>
+             <td class="text-center">
+                <a href="#" class="idgene">
+               <%= JSON.parse(JSON.stringify(data[i].split("\t")))[1] %>
+               <% all.push(JSON.parse(JSON.stringify(data[i].split("\t")))[1]) %>
+               </a>
+             </td>
+           </tr>
+        <% } %>
+        </tbody>
+         <div class="col-sm-12" style="text-align:center">
+    <button type="button" class="btn btn-success buttonCss" onclick="WritePathway( '<%= JSON.stringify(all) %>', '<%= JSON.stringify(data[0].split("\t")) %>')"> Download PathWay</button>
+    </div>
+        <% } %>
+    </table>
+<script>
+
+window.addEventListener("load", function(){
+var load_screen = document.getElementById("load_screen");
+document.body.removeChild(load_screen);
+});
+
+$(document).ready(function() {
+$('#organisms').DataTable();
+} );
+
+var x = document.getElementsByClassName("idgene");
+var i;
+for (i = 0; i < x.length; i++) {
+    var params = x[i].innerText.split(":");
+    x[i].href = '/search/:' + params[0] + "/:" + params[1];
+}
+</script>
+</body>
+</html>

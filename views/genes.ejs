@@ -1,0 +1,113 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+ <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+ <link rel="stylesheet" href="/styles/general.css">
+ <link rel="stylesheet" href="/styles/genes.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+</head>
+<body>
+<%- include /partials/header.ejs %>
+
+<div class="container">
+  <div class="jumbotron">
+
+    <form id="tableForm" action="/getJson" method="get">
+    <div id="organisms_wrapper" class="dataTables_species form-inline dt-bootstrap no-footer">
+      <div class="row">
+          <div id="specie_id" class="dataTables_length">
+            <label>Species List: 
+              <select class="form-control input-sm" name="specie_id" aria-controls="organisms">
+                <option value="undefined">Select One</option>
+                <option value="hsa">Homo Sapiens</option>
+                <option value="hin">Haemophilus influenzae Rd KW20 (serotype d)</option>
+                <option value="mge">Mycoplasma genitalium G37</option>
+                <option value="mja">Methanocaldococcus jannaschii</option>
+                <option value="syn">Synechocystis sp. PCC 6803</option>
+                <option value="sce">Saccharomyces cerevisiae (budding yeast)</option>
+              </select>
+            </label>
+          </div>
+      </div>
+      <div class="row">
+          <label>Genes ID:</label>
+          <textarea class="form-control" rows="5" id="comment" name="textinput"></textarea>
+      </div>
+      <section id="with-container-example">
+          <h2>Options:</h2>
+      <div class="row">
+        <div class="container">
+      <div class="col-sm-6">
+          <div class="row">
+            <label>
+              Kegg, NCBI
+              <input id="input-1" type="checkbox" name="keggsearch">
+              <script>
+               $('#input-1').checkboxpicker({
+                 html: true,
+                 offLabel: '<span class="glyphicon glyphicon-remove">',
+                 onLabel: '<span class="glyphicon glyphicon-ok">'
+               });
+              </script>
+            </label>
+            <label>
+              Ensenbl
+              <input id="input-1" type="checkbox" name="ensemblsearch">
+              <script>
+                $('#input-1').checkboxpicker({
+                  html: true,
+                  offLabel: '<span class="glyphicon glyphicon-remove">',
+                  onLabel: '<span class="glyphicon glyphicon-ok">'
+                });
+              </script>
+            </label>
+          </div>
+            <div class="row">
+            <label>
+              Convert Ensembl To Kegg
+              <input id="input-1" type="checkbox" name="convertTokegg">
+              <script>
+                $('#input-1').checkboxpicker({
+                  html: true,
+                  offLabel: '<span class="glyphicon glyphicon-remove">',
+                  onLabel: '<span class="glyphicon glyphicon-ok">'
+                });
+              </script>
+            </label>
+            <label>
+              Cconvert Kegg To Ensembl
+              <input id="input-1" type="checkbox" name="convertToEnsembl">
+              <script>
+                $('#input-1').checkboxpicker({
+                  html: true,
+                  offLabel: '<span class="glyphicon glyphicon-remove">',
+                  onLabel: '<span class="glyphicon glyphicon-ok">'
+                });
+              </script>
+            </label>
+          </div>
+        </div>
+      </div>
+      </section>
+      </div>
+        <div class="row">
+          <div class="row">
+          <input type="submit" />
+        </div>
+      </div>
+        </form>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

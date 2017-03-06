@@ -1,0 +1,114 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+ <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+ <link rel="stylesheet" href="/styles/general.css">
+ <link rel="stylesheet" href="/styles/genes.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+</head>
+<body>
+<%- include /partials/header.ejs %>
+
+<div class="container">
+  <div class="jumbotron">
+
+    <form id="tableForm" action="/solrResult" method="get">
+    <div id="organisms_wrapper" class="dataTables_species form-inline dt-bootstrap no-footer">
+      
+  
+          <h2>Attribute Options:</h2>
+      <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+             <label for="usr">Strand:</label>
+              <input type="text" class="form-control" id="usr" name="attStrand">
+            </div>
+            <div class="col-sm-6">
+             <label for="usr">Transcript:</label>
+              <input type="text" class="form-control" id="usr" name="attTranscript">
+            </div>
+            <div class="col-sm-6">
+             <label for="usr">Version:</label>
+              <input type="text" class="form-control" id="usr" name="attVersion">
+            </div>
+            <div class="col-sm-6">
+             <label for="usr">Seq Region Name:</label>
+              <input type="text" class="form-control" id="usr" name="attSeq">
+            </div>
+             <div class="row">
+          <label>Search in all attributes:</label>
+          <textarea class="form-control" rows="5" id="comment" name="textinput"></textarea>
+      </div>
+          </div>
+        </div>
+      </div>
+
+                <h2>Attribute Range Options:</h2>
+      <div class="row">
+       <div id="specie_id" class="dataTables_length">
+            <label>Initial Transcripts: 
+              <select class="form-control input-sm" name="initial" aria-controls="organisms">
+                <option value="undefined">Select One</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+              </select>
+            </label>
+          </div>
+          <div id="specie_id" class="dataTables_length">
+            <label>Final Transcripts: 
+              <select class="form-control input-sm" name="final" aria-controls="organisms">
+                <option value="undefined">Select One</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+              </select>
+            </label>
+          </div>
+      </div>
+            
+    </div>
+    <div class="row">
+      <div class="row">
+        <input type="submit" />
+      </div>
+    </div>
+    </form>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

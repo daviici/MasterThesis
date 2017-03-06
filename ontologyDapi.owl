@@ -1,0 +1,511 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#"
+     xml:base="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontologyDapi="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Caracterizado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Caracterizado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Contem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Contem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Inserido -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Inserido">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#AssemblyNome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#AssemblyNome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Descrição -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Descrição">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#End -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#End">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Espécie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Espécie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Identificador -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Identificador">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Nome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#NumeroExons -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#NumeroExons">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Start -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Start">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes"/>
+        <AssemblyNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRCh38</AssemblyNome>
+        <Descrição rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deleted in lung and esophageal cancer 1 [Source:HGNC Symbol;Acc:HGNC:2899]</Descrição>
+        <Espécie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homo_sapiens</Espécie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes"/>
+        <AssemblyNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRCh38</AssemblyNome>
+        <Descrição rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver cancer-associated transcript 5 [Source:EntrezGene;Acc:105375475]</Descrição>
+        <Espécie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homo_sapiens</Espécie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes"/>
+        <AssemblyNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRCh38</AssemblyNome>
+        <Descrição rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prostate cancer susceptibility candidate 2 [Source:HGNC Symbol;Acc:HGNC:30143]</Descrição>
+        <Espécie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homo_sapiens</Espécie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes"/>
+        <AssemblyNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRCh38</AssemblyNome>
+        <Descrição rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KH RNA binding domain containing, signal transduction associated 2 [Source:HGNC Symbol;Acc:HGNC:18114]</Descrição>
+        <Espécie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homo_sapiens</Espécie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes"/>
+        <AssemblyNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRCh38</AssemblyNome>
+        <Descrição rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SH3BP5 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:44501]</Descrição>
+        <Espécie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homo_sapiens</Espécie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+        <Caracterizado rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes01"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Trancritos01_1"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_2"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_3"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_4"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_5"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_6"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_7"/>
+        <Inserido rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao01"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENSG00000008226</Identificador>
+        <Nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DLEC1</Nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+        <Caracterizado rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes02"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos02_1"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos02_2"/>
+        <Inserido rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao02"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENSG00000225546</Identificador>
+        <Nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LVCAT5</Nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+        <Caracterizado rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes03"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos03_1"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos03_2"/>
+        <Inserido rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao03"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENSG00000229637</Identificador>
+        <Nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRAC2</Nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+        <Caracterizado rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Detalhes04"/>
+        <Contem rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos04_1"/>
+        <Inserido rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao04"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENSG00000112232</Identificador>
+        <Nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KHDRBS2</Nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Gene"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000281156</Identificador>
+        <Nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SH3BP5-AS1</Nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao"/>
+        <End rdf:datatype="http://www.w3.org/2001/XMLSchema#int">38124025</End>
+        <Start rdf:datatype="http://www.w3.org/2001/XMLSchema#int">38039205</Start>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao"/>
+        <End rdf:datatype="http://www.w3.org/2001/XMLSchema#int">119907375</End>
+        <Start rdf:datatype="http://www.w3.org/2001/XMLSchema#int">119704556</Start>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao"/>
+        <End rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48724758</End>
+        <Start rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48723168</Start>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao"/>
+        <End rdf:datatype="http://www.w3.org/2001/XMLSchema#int">62286227</End>
+        <Start rdf:datatype="http://www.w3.org/2001/XMLSchema#int">61679960</Start>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Regiao"/>
+        <End rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15264493</End>
+        <Start rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15254184</Start>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Trancritos01_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Trancritos01_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000440294</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000308059</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000447130</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000469151</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000477260</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000478428</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos01_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000346219</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos02_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos02_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000431071</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos02_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos02_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000426413</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos03_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos03_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000422730</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos03_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos03_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000432056</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos04_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos04_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000281156</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos05_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos05_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000420195</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos05_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos05_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000413977</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</NumeroExons>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos05_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos05_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi#Transcritos"/>
+        <Identificador rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENST00000436602</Identificador>
+        <NumeroExons rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</NumeroExons>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

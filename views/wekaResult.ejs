@@ -1,0 +1,401 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+ <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+ <link rel="stylesheet" href="/styles/general.css">
+ <link rel="stylesheet" href="/styles/genes.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+</head>
+<body>
+<%- include /partials/header.ejs %>
+
+<div class="container">
+  <div class="jumbotron">
+
+<div class="container">
+  <h2>Clustering Model: Simple K-Means</h2>
+  <strong>Instances: </strong>30<br>
+  <strong>Number of iterations: </strong>3<br>
+  <strong>Within cluster sum of squared errors: </strong>5.288054030189939<br>
+  <h3>Initial starting points (random): </h3>
+  <strong>Cluster 0: </strong>53954834,53958956,1,3,1<br>
+  <strong>Cluster 1: </strong>8133772,8134849,-1,5,1<br>
+  <strong>Cluster 2: </strong>26558337,26561052,1,1,1<br>
+  <h3>Final cluster centroides: </h3>
+<table class="table table-bordered">
+  <thead>
+    <tr class="info">
+        <th>Attribute</th>
+        <th>Full Data (30.0)</th>
+        <th>Cluster 0 (6.0)</th>
+        <th>Cluster 1 (18.0)</th>
+        <th>Cluster 2 (6.0)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="warning">
+      <th scope="row">start</th>
+      <td>77195899.4</td>
+      <td>119404505.3333</td>
+      <td>76501342.5</td>
+      <td>37070964.1667</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">end</th>
+      <td>77210785.1333</td>
+      <td>119442907.1667</td>
+      <td>76510336.1111</td>
+      <td>37080010.1667</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">strand</th>
+      <td>-0.2</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>1</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">version</th>
+      <td>5.0333</td>
+      <td>8.6667</td>
+      <td>4.4444</td>
+      <td>3.1667</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">transcript</th>
+      <td>2.3667</td>
+      <td>5.5</td>
+      <td>1.5</td>
+      <td>1.8333</td>
+    </tr>
+  </tbody>
+</table>
+  <strong>Time taken to build model (full training data) : </strong>0.05 seconds<br>
+  <h3>Clustered Instances:</h3>
+  <strong>Cluster 0: </strong>6 (20%)<br>
+  <strong>Cluster 1: </strong>18 (60%)<br>
+  <strong>Cluster 2: </strong>6 (20%)<br>
+
+</div>
+</div>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+
+<div class="container">
+
+  <h2>Clustering Model: Make Density Based Clusterer</h2>
+<h3>Wrapped clusterer: K-Means</h3>
+<strong>Instances: </strong>30<br>
+<strong>Number of iterations: </strong>2<br>
+  <strong>Within cluster sum of squared errors: </strong>6.470762134857711<br>
+  <h3>Initial starting points (random): </h3>
+  <strong>Cluster 0: </strong>53954834,53958956,1,3,1<br>
+  <strong>Cluster 1: </strong>8133772,8134849,-1,5,1<br>
+  <h3>Final cluster centroides: </h3>
+<table class="table table-bordered">
+  <thead>
+    <tr class="info">
+        <th>Attribute</th>
+        <th>Full Data (30.0)</th>
+        <th>Cluster 0 (12.0)</th>
+        <th>Cluster 1 (18.0)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="warning">
+      <th scope="row">start</th>
+      <td>77195899.4</td>
+      <td>78237734.75</td>
+      <td>76501342.5</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">end</th>
+      <td>77210785.1333</td>
+      <td>78261458.6667</td>
+      <td>76510336.1111</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">strand</th>
+      <td>-0.2</td>
+      <td>1</td>
+      <td>-1</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">version</th>
+      <td>5.0333</td>
+      <td>5.9167</td>
+      <td>4.4444</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">transcript</th>
+      <td>2.3667</td>
+      <td>3.6667</td>
+      <td>1.5</td>
+    </tr>
+  </tbody>
+</table>
+  <h3>Fitted estimators (with ML estimates of variance): </h3>
+  <strong>Cluster: </strong>0 <strong>Prior probability: </strong>0.4063<br>
+  <strong>Attribute: start </strong>Normal Distribution. Mean = 78237734.75 StdDev = 53670469.6184 <br>
+  <strong>Attribute: end </strong>Normal Distribution. Mean = 78261458.6667 StdDev = 53652071.1057 <br>
+  <strong>Attribute: strand </strong>Normal Distribution. Mean = 1 StdDev = 0.9965 <br>
+  <strong>Attribute: version </strong>Normal Distribution. Mean = 5.9167 StdDev = 5.6636 <br>
+  <strong>Attribute: transcript </strong>Normal Distribution. Mean = 3.6667 StdDev = 6.587 <br><br>
+  
+  <strong>Cluster: </strong>1<strong>Prior probability: </strong>0.5938<br>
+  <strong>Attribute: start </strong>Normal Distribution. Mean = 76501342.5 StdDev = 57365372.628 <br>
+  <strong>Attribute: end </strong>Normal Distribution. Mean = 76510336.1111 StdDev = 57363227.0698 <br>
+  <strong>Attribute: strand </strong>Normal Distribution. Mean = -1 StdDev = 0.9965 <br>
+  <strong>Attribute: version </strong>Normal Distribution. Mean = 4.4444 StdDev = 3.3536 <br>
+  <strong>Attribute: transcript </strong>Normal Distribution. Mean = 1.5 StdDev = 0.6872 <br>
+  <p></p>
+  <strong>Time taken to build model (full training data): </strong>0.13 seconds<br>
+  <h3>Clustered Instances:</h3>
+  <strong>Cluster 0: </strong>3(10%)<br>
+  <strong>Cluster 1: </strong>27(90%)<br>
+  <strong>Log likelihood: </strong>-44.50168<br>
+</div>
+</div>
+</div>
+<h3>Cluster 0: </h3>
+      <table class="table table-responsive">
+  <thead>
+    <tr class="info">
+        <th>Instância</th>
+        <th>ID</th>
+        <th>species</th>
+        <th>source</th>
+        <th>type</th>
+        <th>logic_name</th>
+        <th>description</th>
+        <th>display_name</th>
+        <th>assembly_name</th>
+        <th>seq_region_name</th>
+        <th>start</th>
+        <th>end</th>
+        <th>strand</th>
+        <th>version</th>
+        <th>db_type</th>
+        <th>transcript</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="warning">
+      <th scope="row">9</th>
+      <td>ENSG00000237872</td>
+      <td>homo_sapiens</td>
+      <td>havana</td>
+      <td>Gene</td><td>havana</td>
+      <td>POUclass5homeobox1pseudogene4[Source:HGNCSymbol;Acc:HGNC:33310]</td>
+      <td>POU5F1P4</td>
+      <td>GRCh38</td>
+      <td>1</td>
+      <td>155433178</td>
+      <td>155434262</td>
+      <td>1</td>
+      <td>4</td>
+      <td>core</td>
+      <td>1</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">12</th>
+      <td>ENSG00000128713</td>
+      <td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>homeoboxD11[Source:HGNCSymbol;Acc:HGNC:5134]</td><td>HOXD11</td><td>GRCh38</td><td>2</td><td>176104216</td><td>176109754</td><td>1</td><td>12</td><td>core</td><td>3</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">20</th>
+      <td>ENSG00000148516</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>zincfingerE-boxbindinghomeobox1[Source:HGNCSymbol;Acc:HGNC:11642]</td><td>ZEB1</td><td>GRCh38</td><td>10</td><td>31318495</td><td>31529814</td><td>1</td><td>21</td><td>core</td><td>25</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">22</th>
+      <td>ENSG00000131721</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>Rhoxhomeoboxfamilymember2[Source:HGNCSymbol;Acc:HGNC:30011]</td><td>RHOXF2</td><td>GRCh38</td><td>0</td><td>120158561</td><td>120165630</td><td>1</td><td>5</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">23</th>
+      <td>ENSG00000151650</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>VENThomeobox[Source:HGNCSymbol;Acc:HGNC:13639]</td><td>VENTX</td><td>GRCh38</td><td>10</td><td>133237404</td><td>133241929</td><td>1</td><td>7</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">27</th>
+      <td>ENSG00000231697</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>Nanoghomeoboxpseudogene5[Source:HGNCSymbol;Acc:HGNC:23103]</td><td>NANOGP5</td><td>GRCh38</td><td>9</td><td>100175178</td><td>100176054</td><td>1</td><td>3</td><td>core</td><td>2</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Cluster 1: </h3>
+      <table class="table table-responsive">
+  <thead>
+    <tr class="info">
+        <th>Instância</th>
+        <th>ID</th>
+        <th>species</th>
+        <th>source</th>
+        <th>type</th>
+        <th>logic_name</th>
+        <th>description</th>
+        <th>display_name</th>
+        <th>assembly_name</th>
+        <th>seq_region_name</th>
+        <th>start</th>
+        <th>end</th>
+        <th>strand</th>
+        <th>version</th>
+        <th>db_type</th>
+        <th>transcript</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="warning">
+      <th scope="row">1</th>
+      <td>ENSG00000227059</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>anomaloushomeobox[Source:HGNCSymbol;Acc:HGNC:40024]</td><td>ANHX</td><td>GRCh38</td><td>12</td><td>133218312</td><td>133236095</td><td>-1</td><td>6</td><td>core</td><td>2</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">2</th>
+      <td>ENSG00000178928</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>tetrapeptiderepeathomeobox1[Source:HGNCSymbol;Acc:HGNC:32174]</td><td>TPRX1</td><td>GRCh38</td><td>19</td><td>47801243</td><td>47819051</td><td>-1</td><td>8</td><td>core</td><td>3</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">3</th>
+      <td>ENSG00000119608</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>prosperohomeobox2[Source:HGNCSymbol;Acc:HGNC:26715]</td><td>PROX2</td><td>GRCh38</td><td>14</td><td>74852871</td><td>74871940</td><td>-1</td><td>12</td><td>core</td><td>3</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">5</th>
+      <td>ENSG00000174279</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>even-skippedhomeobox2[Source:HGNCSymbol;Acc:HGNC:3507]</td><td>EVX2</td><td>GRCh38</td><td>2</td><td>176077472</td><td>176083913</td><td>-1</td><td>4</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">6</th>
+      <td>ENSG00000234493</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>Rhoxhomeoboxfamilymember1pseudogene1[Source:HGNCSymbol;Acc:HGNC:51580]</td><td>RHOXF1P1</td><td>GRCh38</td><td>0</td><td>120010718</td><td>120015544</td><td>-1</td><td>2</td><td>core</td><td>2</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">7</th>
+      <td>ENSG00000274529</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>SEBOXhomeobox[Source:HGNCSymbol;Acc:HGNC:32942]</td><td>SEBOX</td><td>GRCh38</td><td>17</td><td>28364268</td><td>28365244</td><td>-1</td><td>5</td><td>core</td><td>2</td>
+    </tr>
+     <tr class="warning">
+      <th scope="row">8</th>
+      <td>ENSG00000235602</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>POUclass5homeobox1pseudogene3[Source:HGNCSymbol;Acc:HGNC:9222]</td><td>POU5F1P3</td><td>GRCh38</td><td>12</td><td>8133772</td><td>8134849</td><td>-1</td><td>5</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">11</th>
+      <td>ENSG00000101883</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>Rhoxhomeoboxfamilymember1[Source:HGNCSymbol;Acc:HGNC:29993]</td><td>RHOXF1</td><td>GRCh38</td><td>0</td><td>120109053</td><td>120115937</td><td>-1</td><td>4</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">13</th>
+      <td>ENSG00000282757</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>doublehomeoboxB[Source:HGNCSymbol;Acc:HGNC:33345]</td><td>DUXB</td><td>GRCh38</td><td>16</td><td>75694434</td><td>75700152</td><td>-1</td><td>2</td><td>core</td><td>2</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">14</th>
+      <td>ENSG00000231411</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>doublehomeobox4like31(pseudogene)[Source:HGNCSymbol;Acc:HGNC:51770]</td><td>DUX4L31</td><td>GRCh38</td><td>0</td><td>10171590</td><td>10172725</td><td>-1</td><td>1</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">17</th>
+      <td>ENSG00000258336</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>POUclass5homeobox1pseudogene3[Source:HGNCSymbol;Acc:HGNC:9222]</td><td>DUX4L52</td><td>GRCh38</td><td>12</td><td>61600067</td><td>61600843</td><td>-1</td><td>2</td><td>core</td><td>1</td>
+
+    </tr> <tr class="info">
+      <th scope="row">19</th>
+      <td>ENSG00000150051</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>mohawkhomeobox[Source:HGNCSymbol;Acc:HGNC:23729]</td><td>MKX</td><td>GRCh38</td><td>10</td><td>27672875</td><td>27746060</td><td>-1</td><td>13</td><td>core</td><td>2</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">21</th>
+      <td>ENSG00000063515</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>goosecoidhomeobox2[Source:HGNCSymbol;Acc:HGNC:4613]</td><td>GSC2</td><td>GRCh38</td><td>22</td><td>19148576</td><td>19150283</td><td>-1</td><td>2</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">24</th>
+      <td>ENSG00000227351</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>Nanoghomeoboxpseudogene6[Source:HGNCSymbol;Acc:HGNC:23104]</td><td>NANOGP6</td><td>GRCh38</td><td>10</td><td>99788564</td><td>99789410</td><td>-1</td><td>2</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">26</th>
+      <td>ENSG00000228670</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>Nanoghomeoboxpseudogene2[Source:HGNCSymbol;Acc:HGNC:23100]</td><td>NANOGP2</td><td>GRCh38</td><td>2</td><td>222452400</td><td>222453126</td><td>-1</td><td>4</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">28</th>
+      <td>ENSG00000231750</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>Nanoghomeoboxpseudogene10[Source:HGNCSymbol;Acc:HGNC:23108]</td><td>NANOGP10</td><td>GRCh38</td><td>0</td><td>43407665</td><td>43408559</td><td>-1</td><td>3</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="warning">
+      <th scope="row">29</th>
+      <td>ENSG00000231809</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>Nanoghomeoboxpseudogene9[Source:HGNCSymbol;Acc:HGNC:23107]</td><td>NANOGP9</td><td>GRCh38</td><td>0</td><td>65772741</td><td>65773632</td><td>-1</td><td>4</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">30</th>
+      <td>ENSG00000270552</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>doublehomeoboxApseudogene3[Source:HGNCSymbol;Acc:HGNC:32182]</td><td>DUXAP3</td><td>GRCh38</td><td>10</td><td>42747544</td><td>42748687</td><td>-1</td><td>1</td><td>core</td><td>1</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Cluster 2: </h3>
+      <table class="table table-responsive">
+  <thead>
+    <tr class="info">
+        <th>Instância</th>
+        <th>ID</th>
+        <th>species</th>
+        <th>source</th>
+        <th>type</th>
+        <th>logic_name</th>
+        <th>description</th>
+        <th>display_name</th>
+        <th>assembly_name</th>
+        <th>seq_region_name</th>
+        <th>start</th>
+        <th>end</th>
+        <th>strand</th>
+        <th>version</th>
+        <th>db_type</th>
+        <th>transcript</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="warning">
+      <th scope="row">4</th>
+      <td>ENSG00000123407</td><td>homo_sapiens</td><td>ensembl_havana</td><td>Gene</td><td>ensembl_havana_gene</td><td>homeoboxC12[Source:HGNCSymbol;Acc:HGNC:5124]</td><td>HOXC12</td><td>GRCh38</td><td>12</td><td>53954834</td><td>53958956</td><td>1</td><td>3</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">10</th>
+      <td>ENSG00000259849</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>VENThomeoboxpseudogene1[Source:HGNCSymbol;Acc:HGNC:30900]</td><td>VENTXP1</td><td>GRCh38</td><td>0</td><td>26558337</td><td>26561052</td><td>1</td><td>1</td><td>core</td><td>1</td>
+    </tr>
+     <tr class="warning">
+      <th scope="row">15</th>
+      <td>ENSG00000270222</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>doublehomeoboxApseudogene11[Source:HGNCSymbol;Acc:HGNC:51812]</td><td>DUXAP11</td><td>GRCh38</td><td>16</td><td>59655602</td><td>59656336</td><td>1</td><td>1</td><td>core</td><td>1</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">16</th>
+      <td>ENSG00000250482</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>doublehomeobox4like51(pseudogene)[Source:HGNCSymbol;Acc:HGNC:51810]</td><td>DUX4L51</td><td>GRCh38</td><td>5</td><td>31249879</td><td>31250987</td><td>1</td><td>3</td><td>core</td><td>1</td>
+    </tr>
+     <tr class="warning">
+      <th scope="row">18</th>
+      <td>ENSG00000206195</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>doublehomeoboxApseudogene8[Source:EntrezGene;Acc:503637]</td><td>DUXAP8</td><td>GRCh38</td><td>22</td><td>15784959</td><td>15829984</td><td>1</td><td>10</td><td>core</td><td>6</td>
+    </tr>
+    <tr class="info">
+      <th scope="row">25</th>
+      <td>ENSG00000282308</td><td>homo_sapiens</td><td>havana</td><td>Gene</td><td>havana</td><td>divergent-pairedrelatedhomeoboxpseudogene3[Source:HGNCSymbol;Acc:HGNC:32169]</td><td>DPRXP3</td><td>GRCh38</td><td>14</td><td>35222174</td><td>35222746</td><td>1</td><td>1</td><td>core</td><td>1</td>
+    </tr>
+  </tbody>
+</table>
+<div class="container">
+  <div class="jumbotron">
+
+<div class="container">
+<h3>Caracterização dos clusters: </h3>
+  <strong>Cluster 0: </strong><br>
+  <strong>strand= 1 </strong> Em 100% das instâncias.<br>
+  <strong>source= ensembl_havana </strong> Em 66,7% das instâncias.<br><br>
+
+  <strong>Cluster 1: </strong><br>
+  <strong>strand= -1 </strong>Em 100% das instâncias.<br>
+  <strong>transcript= 1 </strong>Em 61,1% das instâncias.<br><br>
+
+  <strong>Cluster 2: </strong><br>
+  <strong>strand= 1 </strong>Em 100% das instâncias.<br>
+  <strong>source=  havana </strong>Em 83,3% das instâncias.<br>
+  <strong>transcript= 1 </strong>Em 83,3% das instâncias.<br><br>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>

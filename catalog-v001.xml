@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1488421960566" name="http://www.semanticweb.org/david/ontologies/2017/1/geneOntology" uri="genes.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1488421960566" name="http://www.semanticweb.org/david/ontologies/2017/1/ontologyDapi" uri="ontologyDapi.owl"/>
+    </group>
+</catalog>

@@ -1,0 +1,58 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+ <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+ <link rel="stylesheet" href="/styles/general.css">
+ <link rel="stylesheet" href="/styles/genes.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+</head>
+<body>
+<%- include /partials/header.ejs %>
+
+<div class="container">
+  <div class="jumbotron">
+<form id="tableForm" action="/wekaAction" method="get">
+    <div class="form-group">
+    <label for="exampleInputFile">Input Weka file (.arff)</label>
+    <input type="file" id="exampleInputFile">
+  </div>
+  <div class="row">
+    <strong>Clustering Algorithms:</strong><br>
+   <label>
+              Make Density Based Clusterer
+              <input id="input-1" type="checkbox" name="MDBC">
+              <script>
+                $('#input-1').checkboxpicker({
+                  html: true,
+                  offLabel: '<span class="glyphicon glyphicon-remove">',
+                  onLabel: '<span class="glyphicon glyphicon-ok">'
+                });
+              </script>
+            </label>
+    <label>
+              Simple K-Means
+              <input id="input-1" type="checkbox" name="KMeans">
+              <script>
+                $('#input-1').checkboxpicker({
+                  html: true,
+                  offLabel: '<span class="glyphicon glyphicon-remove">',
+                  onLabel: '<span class="glyphicon glyphicon-ok">'
+                });
+              </script>
+            </label>
+          </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+</div>
+
+</body>
+</html>

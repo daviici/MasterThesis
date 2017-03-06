@@ -1,0 +1,21 @@
+{ [Error: Cannot find module '../build/Release/bson'] code: 'MODULE_NOT_FOUND' }
+js-bson: Failed to load c++ bson extension, using pure JS version
+The magic happens on port 8080
+[90mGET / [36m304 [90m27ms[0m
+[90mGET /styles/index.css [36m304 [90m5ms[0m
+[90mGET /styles/bootstrap.css [36m304 [90m1ms[0m
+[90mGET /scripts/bootstrap.js [36m304 [90m0ms[0m
+[90mGET /scripts/header.js [36m304 [90m0ms[0m
+[90mGET /images/wallpaper.jpg [36m304 [90m1ms[0m
+[90mGET /fonts/glyphicons-halflings-regular.woff2 [33m404 [90m5ms[0m
+[90mGET /fonts/glyphicons-halflings-regular.woff [33m404 [90m3ms[0m
+[90mGET /fonts/glyphicons-halflings-regular.ttf [33m404 [90m1ms[0m
+[90mGET /general [36m304 [90m2294ms[0m
+[90mGET /styles/general.css [36m304 [90m1ms[0m
+[90mGET /styles/bootstrap.css [36m304 [90m1ms[0m
+[90mGET /scripts/bootstrap.js [36m304 [90m1ms[0m
+[90mGET /scripts/header.js [36m304 [90m1ms[0m
+[90mGET /images/ajax-loader.gif [36m304 [90m1ms[0m
+[90mGET /fonts/glyphicons-halflings-regular.woff2 [33m404 [90m2ms[0m
+[90mGET /fonts/glyphicons-halflings-regular.woff [33m404 [90m1ms[0m
+[90mGET /fonts/glyphicons-halflings-regular.ttf [33m404 [90m2ms[0m

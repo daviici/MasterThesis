@@ -1,0 +1,41 @@
+div#load_screen{
+  position: fixed;
+  z-index:10;
+  top: 0px;
+  width: 100%;
+  height: 1600px;
+  opacity: 0.7;
+  background-color: #fff;
+  white-space: nowrap;
+}
+div#load_screen > div#loading{
+  color:#000;
+  width:120px;
+  height:24px;
+  margin: 300px auto;
+}
+
+.dataTables_wrapper  {
+  margin-left:25px;
+  margin-right:25px;
+}
+.dataTables_species {
+  margin-left:50px;
+  margin-right:50px;
+}
+
+.buttonCss {
+  min-width: 150px;
+  min-height: 40px;
+  font-weight: bold;
+  font-family: Verdana;
+}
+
+body {
+  padding-bottom: 25px;
+
+}
+
+.col-sm-6 p{
+   font-family: Trebuchet MS;
+}
